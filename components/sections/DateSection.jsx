@@ -88,22 +88,23 @@ export default function DateSection() {
   return (
     <section 
       ref={sectionRef}
-      /* style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('${parents.backgroundImage}')`,
+       style={{
+        backgroundImage: `url('/images/marcoFlores2.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         position: 'relative',
-      }} */
-     style={{
-      //background: "url('/images/texturaAzul01.jpeg')",
-    }}
+      }}
       id="date" 
       className={`relative overflow-hidden`}
     >
 
       {/* Video de fondo */}
-      <div className="absolute inset-0">
+      <div 
+      style={{
+        display:'none'
+      }}
+      className="absolute inset-0">
         <video
           ref={videoRef}
           autoPlay

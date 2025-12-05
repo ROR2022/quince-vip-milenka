@@ -58,10 +58,10 @@ export default function GiftsSection() {
     <section
       ref={sectionRef}
       style={{
-        /* backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${parents.backgroundImage}')`,
+        backgroundImage: `url('/images/marcoFlores2.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat', */
+        backgroundRepeat: 'no-repeat', 
         position: 'relative',
       }}
       id="gifts"
@@ -69,7 +69,11 @@ export default function GiftsSection() {
     >
 
 {/* Video de fondo */}
-      <div className="absolute inset-0">
+      <div 
+      style={{
+        display:'none'
+      }}
+      className="absolute inset-0">
         <video
           ref={videoRef}
           autoPlay

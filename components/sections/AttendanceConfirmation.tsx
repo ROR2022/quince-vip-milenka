@@ -229,17 +229,21 @@ ${formData.mensaje ? `💌 *Mensaje especial:*\n${formData.mensaje}` : ""}
     <section
       ref={sectionRef}
       style={{
-        /* background: "url('/images/fondoAzul2.jpg')",
+        background: "url('/images/marcoFlores2.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat", */
+        backgroundRepeat: "no-repeat", 
         //backgroundColor: "#fff",
       }}
       className="relative py-20 px-4"
     >
 
 {/* Video de fondo */}
-      <div className="absolute inset-0">
+      <div 
+      style={{
+        display:'none'
+      }}
+      className="absolute inset-0">
         <video
           ref={videoRef}
           autoPlay
@@ -300,6 +304,9 @@ ${formData.mensaje ? `💌 *Mensaje especial:*\n${formData.mensaje}` : ""}
             </h3>
 
             <p
+            style={{
+              display:'none'
+            }}
               className={`text-xl text-amber-900 bg-slate-300 bg-opacity-60 rounded-2xl p-6 leading-relaxed max-w-lg mx-auto transition-all duration-1000 delay-1000 ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
@@ -560,7 +567,11 @@ ${formData.mensaje ? `💌 *Mensaje especial:*\n${formData.mensaje}` : ""}
               </Button>
 
               {/* Texto informativo debajo del botón */}
-              <p className={`mt-4 text-sm opacity-75 text-pink-500 bg-emerald-200 bg-opacity-50 p-4 rounded-xl transition-all duration-1000 delay-8000 ${
+              <p 
+              style={{
+                display:'none'
+              }}
+              className={`mt-4 text-sm opacity-75 text-pink-500 bg-emerald-200 bg-opacity-50 p-4 rounded-xl transition-all duration-1000 delay-8000 ${
                 isVisible 
                   ? 'opacity-75 translate-y-0' 
                   : 'opacity-0 translate-y-8'

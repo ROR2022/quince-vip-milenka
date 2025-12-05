@@ -62,16 +62,20 @@ export default function DressCodeSection() {
       id="dresscode"
       className="py-20"
       style={{
-        /* backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url('${parents.backgroundImage}')`,
+        backgroundImage: `url('/images/marcoFlores2.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat", */
+        backgroundRepeat: "no-repeat",
         position: "relative",
       }}
     >
 
 {/* Video de fondo */}
-      <div className="absolute inset-0">
+      <div 
+      style={{
+        display:'none'
+      }}
+      className="absolute inset-0">
         <video
           ref={videoRef}
           autoPlay

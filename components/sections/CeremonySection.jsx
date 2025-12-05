@@ -84,21 +84,23 @@ export default function CeremonySection() {
   return (
     <section
       ref={sectionRef}
-      /* style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('${parents.backgroundImage}')`,
+       style={{
+        backgroundImage: `url('/images/marcoFlores2.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         position: 'relative',
-      }} */
-     style={{
-      //background: "url('/images/texturaAzul01.jpeg')",
-    }}
+      }}
+     
       id="ceremony"
       className="py-20 relative overflow-hidden"
     >
 {/* Video de fondo */}
-      <div className="absolute inset-0">
+      <div 
+      style={{
+        display:'none'
+      }}
+      className="absolute inset-0">
         <video
           ref={videoRef}
           autoPlay

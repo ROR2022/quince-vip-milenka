@@ -31,7 +31,7 @@ const { backgroundCarrouselImages } = hero;
 
 export default function WeddingInvitation() {
   const [isOpenInvitation, setIsOpenInvitation] = useState(false);
-  const [isWelcomeMessageVisible, setIsWelcomeMessageVisible] = useState(false);
+  //const [isWelcomeMessageVisible, setIsWelcomeMessageVisible] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -42,12 +42,12 @@ export default function WeddingInvitation() {
 
   const handleOpenInvitation = () => {
     setIsOpenInvitation(true);
-    setIsWelcomeMessageVisible(true);
+    //setIsWelcomeMessageVisible(true);
   };
 
-   const handleContinue = () => {
+   /* const handleContinue = () => {
     setIsWelcomeMessageVisible(false);
-  }; 
+  }; */ 
 
   if (!isMounted) {
     return null; // Evita el renderizado en el servidor
@@ -59,9 +59,9 @@ export default function WeddingInvitation() {
     )
   }
 
-   if (isWelcomeMessageVisible) {
+  /*  if (isWelcomeMessageVisible) {
     return <WelcomeMessage onContinue={handleContinue} />
-  } 
+  }  */
 
 
 
@@ -101,12 +101,12 @@ export default function WeddingInvitation() {
       <DateSection />
       <CeremonySection />
       {/* <ReceptionSection /> */}
-      <TimelineSection />
+      {/* <TimelineSection /> */}
       <DressCodeSection />
        <AttendanceConfirmation />
       <GiftsSection />
       {/* <GallerySection /> */}
-      <PremiumGallery />
+      {/* <PremiumGallery /> */}
       {/* <VideoElement /> */}
       {/* <QRCode /> */}
       {/* <CustomInvitations /> */}

@@ -78,10 +78,10 @@ export default function ParentsSection() {
       ref={sectionRef}
       
       style={{
-        /* backgroundImage: `url('/images/marcoFlores2.png')`,
+        backgroundImage: `url('/images/marcoFlores2.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat", */
+        backgroundRepeat: "no-repeat", 
         //backgroundColor: "#89ac76",
         position: "relative",
       }}
@@ -90,7 +90,11 @@ export default function ParentsSection() {
     >
 
       {/* Video de fondo */}
-      <div className="absolute inset-0">
+      <div 
+      style={{
+        display:'none'
+      }}
+      className="absolute inset-0">
         <video
           ref={videoRef}
           autoPlay
