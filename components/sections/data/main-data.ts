@@ -337,6 +337,36 @@ export const quinceMainData = {
         src: "/images/mil22.jpg",
         alt: "Fiesta Inolvidable",
         caption: "",
+      },
+      {
+        id: "image23",
+        src: "/images/mil23.jpg",
+        alt: "Recuerdos para Siempre",
+        caption: "",
+      },
+      {
+        id: "image24",
+        src: "/images/mil24.jpg",
+        alt: "Diversión y Alegría",
+        caption: "",
+      },
+      {
+        id: "image25",
+        src: "/images/mil25.jpg",
+        alt: "Un Día para Recordar",
+        caption: "",
+      },
+      {
+        id: "image26",
+        src: "/images/mil26.jpg",
+        alt: "Celebración con Estilo",
+        caption: "",
+      },
+      {
+        id: "image27",
+        src: "/images/mil27.jpg",
+        alt: "Momentos Especiales",
+        caption: "",
       }
     ],
     imagesUrls: [
