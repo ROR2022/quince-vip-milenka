@@ -48,8 +48,8 @@ export const quinceMainData = {
      Marysol Müller y Karina Müller
      */
     godparents: {
-      godfather: "Karina Müller",
-      godmother: "Marisol Müller",
+      godfather: "Karina Muller",
+      godmother: "Marysol Muller",
       additionalGodmother: "Aurora Chávez Capultitla",
     },
     date: {

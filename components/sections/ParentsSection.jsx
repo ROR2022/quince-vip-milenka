@@ -209,7 +209,7 @@ export default function ParentsSection() {
                           godparentsVisible ? completeClass : basicClass
                         }
                       >
-                        Mis Padrinos
+                        Mis Madrinas
                       </h3>
                     </div>
                     <div className="space-y-3 text-sky-800">
