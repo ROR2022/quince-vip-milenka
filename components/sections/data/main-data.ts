@@ -45,11 +45,11 @@ export const quinceMainData = {
       backgroundImage: "/images/fondoPaola1.png",
     },
     /**
-     Julio César Gallo y Marisol Muller
+     Marysol Müller y Karina Müller
      */
     godparents: {
-      godfather: "Julio César Gallo",
-      godmother: "Marisol Muller",
+      godfather: "Karina Müller",
+      godmother: "Marisol Müller",
       additionalGodmother: "Aurora Chávez Capultitla",
     },
     date: {
