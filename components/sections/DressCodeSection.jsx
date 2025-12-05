@@ -139,7 +139,7 @@ export default function DressCodeSection() {
               ? 'opacity-100 translate-x-0' 
               : 'opacity-0 -translate-x-8'
           }`}>
-            Semi-Formal
+            Formal
           </h3>
           
         

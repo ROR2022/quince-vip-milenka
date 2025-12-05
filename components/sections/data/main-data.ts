@@ -27,7 +27,12 @@ export const quinceMainData = {
       "/images/mil19.jpg",
       "/images/mil20.jpg",
       "/images/mil21.jpg",
-      "/images/mil22.jpg"
+      "/images/mil22.jpg",
+      "/images/mil23.jpg",
+      "/images/mil24.jpg",
+      "/images/mil25.jpg",
+      "/images/mil26.jpg",
+      "/images/mil27.jpg",
     ],
   },
   welcomeSection: {
@@ -76,7 +81,7 @@ export const quinceMainData = {
       venue: "Salón Real Hacienda",
       address: "Eje 4 Nte, Av. Talismán 156, Col. Estrella, Gustavo A. Madero, 07810 Ciudad de México, CDMX",
       type: "Ceremonia de Acción de Gracias",
-      ubiLink: "https://maps.app.goo.gl/TsX6SuZoAm48YEfy7",
+      ubiLink: "https://maps.app.goo.gl/b7ZQM23dbyLiWi6n6",
       ceremonyImage: "/images/paola02.jpeg",
     },
     party: {
@@ -84,7 +89,7 @@ export const quinceMainData = {
       venue: "Salón Real Hacienda",
       address: "Eje 4 Nte, Av. Talismán 156, Col. Estrella, Gustavo A. Madero, 07810 Ciudad de México, CDMX",
       type: "Recepción",
-      ubiLink: "https://maps.app.goo.gl/2Tm4GjEDhi3CVc5W7",
+      ubiLink: "https://maps.app.goo.gl/b7ZQM23dbyLiWi6n6",
     },
     dressCode: "Formal - Rosa solo la quinceañera",
     restrictions: "",
@@ -173,7 +178,7 @@ export const quinceMainData = {
     backgroundImage: "/images/countdown-bg.jpg",
   },
   attendance: {
-    whatsappNumber: "5215567928323", //+52 1 55 6792 8323
+    whatsappNumber: "5215580369859", //+52 1 55 8036 9859
     title: "CONFIRMACIÓN DE ASISTENCIA",
     message: "Respetuosamente",
     subtitle: "Confirmar antes del evento.",
@@ -203,7 +208,24 @@ export const quinceMainData = {
     message:
       "Que estés conmigo este día, es lo más importante para nosotros, el obsequio que desees darme, es de tu elección. ¡Sorpréndeme con algo especial!",
     giftsOptions: [
-      
+       {
+        id: "lluviaSobres",
+        name: "Lluvia de Sobres",
+        icon: "💌",
+        description:
+          "Tu presencia es el mejor regalo, pero si deseas contribuir, una lluvia de sobres sería muy apreciada.",
+        image: "/images/gifts/envelope.png",
+        link: "https://example.com/lluvia-de-sobres",
+      },
+      {
+        id: "regaloSorpresa",
+        name: "Regalo Sorpresa",
+        icon: "🎁",
+        description:
+          "Una sorpresa especial siempre es bienvenida. ¡Elige algo que creas que me encantará!",
+        image: "/images/gifts/gift-box.png",
+        link: "https://example.com/mesa-de-regalos",
+      }
     ],
   },
   gallery: {
