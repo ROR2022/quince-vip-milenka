@@ -17,6 +17,8 @@ export default function HeroSection() {
   const [scrollPosition, setScrollPosition] = useState(window.scrollY);
   const [isVisible, setIsVisible] = useState(false);
   const [sparklePositions, setSparklePositions] = useState([]);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [hasFadedOut, setHasFadedOut] = useState(false);
 
   const basicClass = "font-script text-4xl text-white mb-4 italic";
   const completeClass =
@@ -40,6 +42,22 @@ export default function HeroSection() {
       setIsVisible(true);
     }
   }, [scrollPosition]);
+
+  // Timer para activar animación después de 6 segundos
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHasAnimated(true);
+    }, 6000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Timer para activar fade out después de 12 segundos (6s inicial + 6s de espera)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHasFadedOut(true);
+    }, 12000);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Generar partículas sparkle
   const generateSparkles = () => {
@@ -81,14 +99,19 @@ export default function HeroSection() {
             //backgroundColor:'#C8BFE780'
           }
         }
-        className="relative flex flex-col justify-center items-center text-center px-4 py-20 md:py-32 lg:py-40"
+        className="absolute inset-0 flex flex-col justify-center items-center text-center"
       >
         <h1
           style={{
             textShadow: "4px 4px 8px rgba(0, 0, 0, 0.5)",
+            transition: "transform 2s ease-in-out, opacity 2s ease-in-out",
+            transform: hasAnimated 
+              ? `translateY(-40vh) ${hasFadedOut ? 'translateX(-100vw)' : ''}` 
+              : 'translateY(0)',
+            opacity: hasFadedOut ? 0 : 1,
             //display: "none",
           }}
-          className={isVisible ? completeClass : basicClass}
+          className={`${isVisible ? completeClass : basicClass}`}
         >
           {hero.subtitle.split(" ").map((word, index) => (
             <span key={index}>
@@ -98,27 +121,19 @@ export default function HeroSection() {
           ))}
         </h1>
 
-        <div className="space-y-2">
-          <div 
-          style={{display:'none'}}
-          className="spotlight-image relative w-full h-96 rounded-full shadow-2xl overflow-hidden mx-auto">
-            <Image
-              src="/images/pao21.jpg"
-              alt="Ceremony Image"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
-            {/* El efecto spotlight se aplica via CSS */}
-          </div>
-          <div
-            style={{
-              textShadow: "4px 4px 8px rgba(0, 0, 0, 0.5)",
-            }}
-            className="text-6xl text-white font-main-text"
-          >
-            {hero.name}
-          </div>
+        
+        <div
+          style={{
+            textShadow: "4px 4px 8px rgba(0, 0, 0, 0.5)",
+            transition: "transform 2s ease-in-out, opacity 2s ease-in-out",
+            transform: hasAnimated 
+              ? `translateY(30vh) ${hasFadedOut ? 'translateX(100vw)' : ''}` 
+              : 'translateY(0)',
+            opacity: hasFadedOut ? 0 : 1,
+          }}
+          className={`text-6xl text-white font-main-text`}
+        >
+          {hero.name}
         </div>
       </div>
     </section>
