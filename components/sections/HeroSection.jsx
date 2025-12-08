@@ -127,7 +127,7 @@ export default function HeroSection() {
             textShadow: "4px 4px 8px rgba(0, 0, 0, 0.5)",
             transition: "transform 2s ease-in-out, opacity 2s ease-in-out",
             transform: hasAnimated 
-              ? `translateY(30vh) ${hasFadedOut ? 'translateX(100vw)' : ''}` 
+              ? `translateY(20vh) ${hasFadedOut ? 'translateX(100vw)' : ''}` 
               : 'translateY(0)',
             opacity: hasFadedOut ? 0 : 1,
           }}
