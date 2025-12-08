@@ -63,9 +63,14 @@ export const generateWhatsAppMessage = (formData: FormData, guestId?: string | n
   const guestText = parseInt(formData.numberOfGuests) === 1 ? 'persona' : 'personas';
   
   // Agregar timestamp para evitar cache de WhatsApp
-  const timestamp = new Date().toLocaleTimeString('es-MX', { 
-    hour: '2-digit', 
-    minute: '2-digit' 
+  // agregar tambien la fecha  tipo Sabado 12 de Octubre de 2024
+  const timestamp = new Date().toLocaleString('es-MX', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
   });
 
   // Construir URL personalizada
